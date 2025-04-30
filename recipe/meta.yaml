@@ -1,5 +1,5 @@
 {% set name = "dbt-databricks" %}
-{% set version = "1.9.7" %}
+{% set version = "1.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: bd9ce223eb241aa0fad82a790a1ac962db48d6a4e7830a30eb1d5878e58db7e6
+  sha256: 0535339f835448fdbe2765f55950c0cbd63724a6358fb7e7bed69ab1d091bfb2
 
 build:
   noarch: python
@@ -22,8 +22,8 @@ requirements:
     - hatchling
   run:
     - python >={{ python_min }}
-    - databricks-sdk ==0.17.0
-    - databricks-sql-connector >=3.5.0,<4.0.0
+    - databricks-sdk >=0.41,<0.48.0
+    - databricks-sql-connector >=4.0.0,<5.0.0
     - dbt-adapters >=1.7.0,<2.0
     - dbt-common >=1.10.0,<2.0
     - dbt-core >=1.8.7,<2.0
