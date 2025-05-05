@@ -1,5 +1,5 @@
 {% set name = "dbt-databricks" %}
-{% set version = "1.10.0" %}
+{% set version = "1.10.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 0535339f835448fdbe2765f55950c0cbd63724a6358fb7e7bed69ab1d091bfb2
+  sha256: 688bb67ba49107ed3544c502b2aef2cd846fb7598e05edb80b9d3ab1ea7f1eef
 
 build:
   noarch: python
